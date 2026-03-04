@@ -6,7 +6,8 @@ services:
     environment: 
       POSTGRES_PASSWORD: secret 
       POSTGRES_DB: myapp_test 
-    networks: - test-network 
+    networks:
+      - test-network 
 
   app: 
     image: ghcr.io/${{ github.repository }}/app:sha-${{ github.sha }} 
