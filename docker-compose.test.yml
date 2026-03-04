@@ -7,7 +7,12 @@ services:
       POSTGRES_PASSWORD: secret 
       POSTGRES_DB: myapp_test 
     networks:
-      - test-network 
+      - test-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
 
   app: 
     image: ${APP_IMAGE}
