@@ -1,27 +1,35 @@
 # Отчет по практической работе №1
 ## Студент: [SSA]
 ## Группа: [16]
-## Дата выполнения: [28.02.2026] 
+## Дата выполнения: [04.03.2026] 
 ### 1. Выполненные команды Docker 
 #### 1.1 Работа с образами
 Поиск образов в Docker Hub
 ![Поиск образов в Docker Hub](screenshots/image.png)
 Скачивание образа
 ![Скачивание образа](screenshots/image2.png)
+
 Просмотр локальных образов
+
 ![Просмотр локальных образов](screenshots/image3.png)
 Просмотр истории слоев образа
 ![Просмотр истории слоев образа](screenshots/image4.png)
+
 Удаление образа
+
 ![Удаление образа](screenshots/image5.png)
 #### Практическое задание
 Поиск образа postgres:15-alpine
 ![Поиск образа postgres:15-alpine](screenshots/image6.png)
+
 Скачивание образа postgres:15-alpine
+
 ![Скачивание образа postgres:15-alpine](screenshots/image7.png)
 Поиск образа golang:1.21-alpine
 ![Поиск образа golang:1.21-alpine](screenshots/image8.png)
+
 Скачивание образа golang:1.21-alpine
+
 ![Скачивание образа golang:1.21-alpine](screenshots/image9.png)
 Просмотр образов
 ![Просмотр образов](screenshots/image10.png)
@@ -39,7 +47,9 @@
 ![Просмотр всех контейнеров (включая остановленные)](screenshots/image14.png)
 Просмотр логов контейнера
 ![Просмотр логов контейнера](screenshots/image15.png)
+
 Подключение к работающему контейнеру
+
 ![Подключение к работающему контейнеру](screenshots/image16.png)
 
 Остановка контейнера
@@ -95,7 +105,9 @@
 Запуск контейнера с nginx
 
 ![Запуск контейнера с nginx](screenshots/image31.png)
+
 Копирование файла index.html внутрь контейнера
+
 ![Копирование файла index.html внутрь контейнера](screenshots/image32.png)
 
 Страница в браузере
