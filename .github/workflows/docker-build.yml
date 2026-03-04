@@ -84,7 +84,11 @@ jobs:
           APP_IMAGE: ghcr.io/${{ github.repository_owner || '' }}${{ '' }}/containers-lab-1/app:sha-${{ github.sha }}
           NGINX_IMAGE: ghcr.io/${{ github.repository_owner || '' }}${{ '' }}/containers-lab-1/nginx:sha-${{ github.sha }}
         run: | 
-          docker compose -f docker-compose.test.yml up -d 
-          sleep 30 
-          curl -f http://localhost/health || exit 1 
-          docker compose down
+          APP_IMAGE=$(echo "ghcr.io/${{ github.repository }}/app:sha-${{ github.sha }}" | tr '[:upper:]' '[:lower:]')
+          NGINX_IMAGE=$(echo "ghcr.io/${{ github.repository }}/nginx:sha-${{ github.sha }}" | tr '[:upper:]' '[:lower:]')
+          export APP_IMAGE
+          export NGINX_IMAGE
+          docker compose -f docker-compose.test.yml up -d
+          sleep 30
+          curl -f http://localhost/api/health || exit 1
+          docker compose -f docker-compose.test.yml down

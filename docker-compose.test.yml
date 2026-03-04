@@ -10,7 +10,7 @@ services:
       - test-network 
 
   app: 
-    image: ${APP_IMAGE} 
+    image: ${APP_IMAGE}
     environment: 
       DB_HOST: postgres 
       DB_PASSWORD: secret 
@@ -21,7 +21,7 @@ services:
       - test-network 
 
   nginx: 
-    image: ${NGINX_IMAGE} 
+    image: ${NGINX_IMAGE}
     ports:
       - "80:80" 
     depends_on:
