@@ -31,13 +31,6 @@ jobs:
       with: 
         version: 'v1.28.0'
     
-    - name: Dry-run apply 
-      run: | 
-        for file in k8s/*.yaml; do 
-          echo "Validating $file" 
-          kubectl apply --dry-run=client --validate=false -f $file
-        done
-    
     - name: Install kubeconform
       run: |
         wget https://github.com/yannh/kubeconform/releases/latest/download/kubeconform-linux-amd64.tar.gz
