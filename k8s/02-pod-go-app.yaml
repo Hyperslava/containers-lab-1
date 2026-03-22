@@ -12,7 +12,7 @@ spec:
     - name: go-app
       image: ghcr.io/hyperslava/containers-lab-1/app:sha-0a34ffc
       ports:
-      - containerPort: 80
+        - containerPort: 80
       resources:
         requests:
           memory: "256Mi"
